@@ -1,0 +1,49 @@
+.billboard {
+  @extend %bright-text-color;
+  @extend %flex;
+  @extend %jc-center;
+  flex-flow: row wrap;
+  padding: ratio(3, em) 0;
+  flex: 100vw;
+  fill: map-get($color, bright);
+}
+
+.billboard--default {
+  background: map-get($color, main);
+}
+
+.billboard--attention {
+  background: map-get($color, dark);
+}
+
+// .billboard--image {
+//   min-height: 10vh;
+//   background: rgba(0, 0, 0, .5) url('https://images.unsplash.com/photo-1443527216320-7e744084f5a7?fit=crop&fm=jpg&h=1150&ixlib=rb-0.3.5&q=80&w=1025') no-repeat center center fixed;
+//   background-size: cover;
+//   background-blend-mode: multiply;
+//   align-items: flex-end;
+// }
+
+
+.billboard__title {
+  @extend %text--largest;
+}
+
+.billboard__content {
+  // flex: 100vw;
+}
+
+.metablock {
+  @extend %flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  @include media('>=small') {
+    flex: 0 calc(33% - #{ratio(2, rem)});
+    justify-content: flex-start;
+  }
+}
+
+.metablock__title {
+  @extend %text--large;
+}

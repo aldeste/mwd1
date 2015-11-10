@@ -1,0 +1,27 @@
+.link,
+%link {
+  @extend %has-shadow-focus-effect;
+  text-decoration: none;
+}
+
+%link--opacity:hover,
+%link--opacity:focus {
+  opacity: .8;
+}
+
+%link--bright {
+  @extend %link;
+  @extend %bright-text-color;
+}
+
+%link--bright:hover,
+%link--bright:focus,
+%link--bright:active {
+  color: opacify(map-get($color, bright), .2);
+}
+
+%link--neutral {
+  @extend %link;
+  text-decoration: none;
+  color: inherit;
+}

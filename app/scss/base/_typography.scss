@@ -1,0 +1,118 @@
+// IMPORTS
+
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300&subset=latin-ext,vietnamese,greek,cyrillic);
+
+// Set base font size on html for easiest REM use
+html {
+  font-size: map-get($text, root);
+}
+
+// Instill body constants
+body {
+  font: 400 1em / 1.5 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  color: map-get($color, dark);
+  // background: map-get($color, bright);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, .35);
+}
+
+p,
+li,
+input,
+textarea,
+select,
+label {
+  font-weight: inherit;
+  color: inherit;
+  font-kerning: normal;
+  font-variant-ligatures: normal;
+}
+
+%text--largest,
+%text--larger,
+%text--large,
+%text--big {
+  font-size: #{map-get($text, large)}rem;
+  font-weight: 400;
+  line-height: line-height-harmony(map-get($text, large), map-get($container, mini));
+  letter-spacing: -.06em;
+  font-variant-ligatures: common-ligatures;
+  font-kerning: normal;
+
+  @include media('>=small') {
+    line-height: line-height-harmony(map-get($text, large), map-get($container, small));
+  }
+}
+
+%text--largest {
+  text-transform: capitalize;
+
+  @include media('>=small') {
+    font-size: #{map-get($text, larger)}rem;
+    line-height: line-height-harmony(map-get($text, larger), map-get($container, small));
+  }
+
+  @include media('>=medium') {
+    font-size: #{map-get($text, largest)}rem;
+    line-height: line-height-harmony(map-get($text, largest), map-get($container, medium));
+    letter-spacing: -.03em;
+  }
+
+  @include media('>=large') {
+    line-height: line-height-harmony(map-get($text, largest), map-get($container, large));
+  }
+}
+
+%text--larger {
+  @include media('>=small') {
+    line-height: line-height-harmony(map-get($text, large), map-get($container, small));
+  }
+
+  @include media('>=medium') {
+    font-size: #{map-get($text, larger)}rem;
+    line-height: line-height-harmony(map-get($text, larger), map-get($container, medium));
+  }
+
+  @include media('>=large') {
+    line-height: line-height-harmony(map-get($text, larger), map-get($container, large));
+  }
+}
+
+%text--large {
+  @include media('>=small') {
+    line-height: line-height-harmony(map-get($text, large), map-get($container, small));
+  }
+
+  @include media('>=medium') {
+    line-height: line-height-harmony(map-get($text, large), map-get($container, medium));
+  }
+
+  @include media('>=large') {
+    line-height: line-height-harmony(map-get($text, large), map-get($container, large));
+  }
+}
+
+%bright-text-color {
+  color: map-get($color, bright);
+}
+
+%medium-grey-text-color {
+  color: map-get($color, medium-grey);
+}
+
+// bold font defined here, so font is easily exchangable and to avoid faux bold
+%bold-font {
+  font-weight: 700;
+}
+
+%text--small {
+  font-size: (ratio(1) / 2)#{rem};
+}
+
+// Will only be spoken by screen readers.
+%text--speak {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="512" width="512" version="1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="flag" fill-rule="evenodd" clip-path="url(#clipPath58463)" transform="matrix(1.0321 0 0 1.0321 -64 .000027592)" stroke-width="1pt">
+  <rect id="rect551" transform="translate(0 -.000030518)" height="496.06" width="655.51" y="0" x="0" fill="#fb1b22"/>
+  <rect id="rect552" transform="translate(0 -.000030518)" height="70.866" width="655.51" y="212.6" x="0" fill="#fff"/>
+  <rect id="rect553" transform="translate(0 -.000030518)" height="496.06" width="70.866" y="0" x="212.6" fill="#fff"/>
+ </g>
+</svg>

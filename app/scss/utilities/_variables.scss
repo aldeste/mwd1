@@ -1,0 +1,103 @@
+
+// Common Ratios
+//
+// Quadrat (or Square/Even)
+// Hemidiagon	1:1.118
+// Trion	1:1.154
+// Quadriagon	1:1.207
+// Biauron	1:1.236
+// Penton	1:1.272
+// Diagon	1:1.414
+// Bipenton	1:1.458
+// Hemiolion	1:1.5
+// Auron (the golden ratio)
+// Hecton (or Sixton)
+// Doppelquadrat (Halves)
+//
+// Followed by common rational ratios.
+$ratio: (
+  quarat: 1,
+  hemidiagon: 1.1180339887498948,
+  trion: 1.1547005383792515,
+  quadriagon: 1.2071067811865475,
+  biauron: 1.2360679774997896,
+  penton: 1.2720196495141103,
+  diagon: 1.414213562373095,
+  bipenton: 1.458,
+  hemiolion: 1.5,
+  auron: 1.618033988749894,
+  hecton: 1.7320508075688773,
+  doppelquadrat: 2,
+  golden-ratio: 1.618033988749894,
+  unison: 1,
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  autmented-fourth: 1.414,
+  diminished-fifth: 1.414,
+  perfect-fifth: 1.5,
+  minor-sixth: 1.6,
+  major-sixth: 1.667,
+  minor-seventh: 1.778,
+  major-seventh: 1.875,
+  octave: 2,
+  major-tenth: 2.5,
+  major-eleventh: 2.667,
+  major-twelfth: 3,
+  double-octave: 4
+) !default;
+
+// Variable maps
+$harmonic-ratio: map-get($ratio, diagon);
+
+$text: (
+  root: 18px,
+  normal-rem: 1,
+  small: 1 / $harmonic-ratio,
+  large: ratio(1),
+  larger: ratio(2),
+  largest: ratio(3)
+) !default;
+
+$color: (
+  main: #9f2e32,
+  dark-main: #710707,
+  accent: #499671,
+  bright-accent: #87968c,
+  dark-accent: #146a6c,
+  dark: rgba(50, 44, 40, 1),
+  medium-grey: rgba(20, 14, 10, .57),
+  bright-grey: rgba(20, 13, 10, .2),
+  bright: rgba(245, 240, 237, .87),
+  brightest: #fff
+) !default;
+
+$color-defs: (
+  header: rgba(darken(map-get($color,dark), 15%), .9),
+) !default;
+
+$container: (
+  mini: 388,
+  small: 628,
+  medium: 751,
+  large: 1016,
+  xlarge: 1215
+) !default;
+
+// No need for "only screen and", display and deliver same content to print and screen, don't hide from old browsers.
+$breakpoints: (
+  xmini: map-get($container, mini),
+  mini: map-get($container, mini) + 50px,
+  small: map-get($container, small) + 80px,
+  medium: map-get($container, medium) + 80px,
+  large: map-get($container, large) + 80px,
+  xlarge: map-get($container, xlarge) + 80px
+);
+
+// Settings
+
+// Normalizer
+$lobotomized-owl: true;
+$oldest-supported-ie-version: 9;

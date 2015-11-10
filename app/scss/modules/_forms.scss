@@ -1,0 +1,21 @@
+.form__fieldset {
+  position: relative;
+  border-collapse: separate;
+}
+
+.form__input,
+%form__input {
+  @extend %is-rounded;
+  @extend %has-shadow-focus-effect;
+  @extend %padding--common;
+  color: map-get($color, dark);
+  display: block; // textarea
+  border: 1px solid map-get($color, bright-grey);
+  background-color: map-get($color, brightest);
+  -webkit-appearance: none; // for search fields and select
+  -moz-appearance: none; // for search fields and select
+}
+
+.form__label {
+  @extend %bold-font;
+}

@@ -1,0 +1,47 @@
+.nav {
+  @extend %flex;
+  flex-flow: column wrap;
+
+  @include media('>=small') {
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+}
+
+  // block--fullspan--large.grid--center--v
+
+.nav__action,
+.nav__form {
+  @extend %link--bright;
+  @extend %padding--common;
+  @extend %top-margin-off;
+  // display: inline-block;
+
+  @include media('>=small') {
+    text-align: center;
+  }
+}
+
+.nav__action {
+  display: inline-block; // IE 10 doesn't recognize order, so we do this to avoid odd layouts there.
+
+  @include media('>=small') {
+    flex: 1;
+  }
+}
+
+
+.nav__form {
+  @extend %flex;
+
+  @include media('>=small') {
+    order: 10;
+    flex: ratio(2);
+  }
+}
+
+.nav__input {
+  @extend %form__input;
+  flex: 1;
+}

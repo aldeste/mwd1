@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+// doesn't output css
+@import 'utilities/index';
+
+// site-wide constant, e.g. reset, typography
+@import 'base/index';
+
+// main components constant on all sites, e.g. header, nav
+@import 'layout/index';
+
+// modular interchangable components, e.g. buttons, images
+@import 'modules/index';
+
+// hacks and quickfix
+// @import 'shame';

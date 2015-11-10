@@ -1,0 +1,51 @@
+//
+// 1. Removes super sensetive selection on touch interfaces
+//
+
+.button {
+  @extend %link--bright;
+  @extend %is-rounded;
+  @extend %has-shadow-focus-effect;
+  padding: ratio(-2, em) ratio(1, em);
+  cursor: pointer;
+  user-select: none; // 1
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  border: 0;
+}
+
+
+@mixin button($color) {
+  background: $color;
+  :hover {
+    background: lighten($color, 30%);
+  }
+}
+
+.button--action {
+  background: map-get($color, dark-main);
+}
+
+.button--action:hover,
+.button--action:focus {
+  background: lighten(map-get($color, dark-main), 10);
+}
+
+.button--action:active {
+  background: lighten(map-get($color, dark-main), 15);
+}
+
+.button--decline {
+  background: map-get($color, bright-accent);
+}
+
+.button--decline:hover,
+.button--decline:focus {
+  background: lighten(map-get($color, bright-accent), 10);
+
+}
+
+.button--decline:active {
+  background: lighten(map-get($color, bright-accent), 15);
+}

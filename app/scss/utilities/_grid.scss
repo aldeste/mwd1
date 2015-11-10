@@ -1,0 +1,23 @@
+// http://alistapart.com/article/content-out-layout
+// Ethan Marcotte's formula = target / context = result.
+// target / context * 100 = percentage.
+// 1,618 / 5,236 * 100
+
+$harmonic-ratio: map-get($ratio, auron) !default;
+$columns: 8 !default;
+$column-margin-ratio: 2 !default;
+
+@function grid($colum, $columns) {
+  $columns-summed: 0;
+  $colum: ratio($colum + 1);
+  @each $current-col in $columns {
+    $columns-summed: $columns-summed + ratio($current-col + 1);
+  }
+  @return percentage($colum / $columns-summed);
+}
+
+@function grid-margin($ratio: $column-margin-ratio, $columns: $columns) {
+  $ratio: ratio($ratio);
+  $number-of-columns: ratio($columns);
+  @return percentage($ratio / $number-of-columns);
+}

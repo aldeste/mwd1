@@ -1,0 +1,25 @@
+// .grid--center
+
+.header {
+  @extend %margin-off;
+  @extend %bright-text-color;
+  @extend %flex;
+  @extend %jc-center;
+  padding: ratio(-4, rem);
+  background: map-get($color-defs, header);
+  flex: 1 100vw;
+
+  @include media('>=small') {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 100vw;
+
+    // Makes sure padding is added after headeds fixed position
+    ~ .header--after {
+      margin-top: 0;
+      padding-top: ratio(4, rem);
+    }
+  }
+}

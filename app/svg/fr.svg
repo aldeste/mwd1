@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="512" width="512" version="1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="flag" fill-rule="evenodd" stroke-width="1pt" transform="matrix(.48166 0 0 .72249 0 7.4219e-7)">
+  <rect id="rect171" height="708.66" width="1063" y="0" x="0" fill="#fff"/>
+  <rect id="rect403" height="708.66" width="354.33" y="0" x="0" fill="#00267f"/>
+  <rect id="rect135" height="708.66" width="354.33" y="0" x="708.66" fill="#f31830"/>
+ </g>
+</svg>

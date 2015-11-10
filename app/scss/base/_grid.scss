@@ -1,0 +1,140 @@
+// Lobotomized owl applies margin top to every child element.
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+* {
+  margin: 0;
+
+  + * {
+    margin-top: ratio(1, em);
+  }
+}
+
+header,
+%top-margin-off-on-children > *,
+%top-margin-off {
+  margin-top: 0;
+}
+
+%wrap,
+.wrap {
+  max-width: #{map-get($container, xlarge)}px;
+  flex: 0 86.292vw;
+}
+
+// flexbox based grid system.
+// Containers
+%flex {
+  display: flex;
+}
+
+%jc-space-between {
+  justify-content: space-between;
+}
+
+%jc-center {
+  justify-content: center;
+}
+
+%flex-flow-column-wrap {
+  flex-flow: column wrap;
+}
+
+%grid,
+.grid {
+  @extend %flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+
+  @include media('>=small') {
+    flex-flow: row wrap;
+  }
+}
+
+.grid--column {
+  @extend %flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.grid--row {
+  @extend %flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.grid--space-around {
+  justify-content: space-around;
+}
+
+.grid--center {
+  @extend %flex;
+  flex-flow: row wrap;
+  flex: 1 100vw;
+  justify-content: center;
+}
+
+body {
+  @extend %flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+%grid--center--everything {
+  @extend %flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid--initial {
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.grid--end {
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.grid--center--v,
+%grid--center--v {
+  @include media('>=small') {
+    align-items: center;
+  }
+}
+
+// Blocks
+.grid__block {
+  @include media('>=small') {
+    margin-top: 0;
+  }
+}
+
+.block--fullspan--large {
+  @include media('>=small') {
+    flex: 100vw;
+  }
+}
+
+$columns: 3;
+@for $i from 1 to $columns + 1 {
+  .grid__width--#{$i} {
+    flex: 0 calc(#{percentage($i / $columns)} - #{ratio(2, rem)});
+  }
+}
+
+@for $i from 1 to $columns + 1 {
+  .grid__block--#{$i} {
+    flex: ratio($i);
+  }
+}
+
+.priority--last {
+  @include media('>=small') {
+    order: 10;
+  }
+}
+
+.priority--important {
+  @include media('>=small') {
+    order: -10;
+  }
+}

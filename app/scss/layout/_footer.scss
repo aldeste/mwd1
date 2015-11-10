@@ -1,0 +1,11 @@
+.footer {
+  @extend %bright-text-color;
+  @extend %top-margin-off;
+  padding: ratio(-4, rem) 0; // padding instead of height, so content can be varied
+  // font-size: ratio(-1, rem);
+  background: map-get($color, dark);
+
+  @include media('>=small') {
+    margin-top: ratio(5, rem);
+  }
+}
