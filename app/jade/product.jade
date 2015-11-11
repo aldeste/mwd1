@@ -1,0 +1,8 @@
+include includes/header
+section.wrap.grid
+  each val in cheese
+    if val.name == "Gorgonzola"
+      h1
+      = val.name
+      p
+      = val.description

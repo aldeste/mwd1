@@ -83,179 +83,187 @@
       </symbol>
     </svg>
     <header class="header">
-      <div class="wrap">
-        <input id="hamburger__checkbox" type="checkbox" class="cb-switch">
-        <label for="hamburger__checkbox" class="link menu-label">menu<span href="#" class="hamburger"><span class="hamburger-icon"></span></span></label>
-        <!--
-        list used to accessibility, info is given to user about how many
-        items are in lists if screenreaders are used
-        -->
-        <nav role="navigation" class="nav cb-toggle"><a href="#" class="nav__action">
-            <svg class="icon--logo">
-              <use xlink:href="#icon-logo"></use>
-            </svg></a>
-          <form action="#" class="nav__form">
-            <input name="search" placeholder="search" type="search" autofocus class="nav__input">
-          </form><a href="#" class="nav__action ficon ficon--list">browse</a><a href="#" class="nav__action ficon ficon--heart">pay</a><span class="nav__action">
-            <input id="signin__checkbox" type="checkbox" class="cb-switch">
-            <label for="signin__checkbox" class="ficon ficon--user">sign in</label>
-            <form action="#" class="dropdown">
-              <label for="username">Username</label>
-              <input id="username" type="text" class="form__input">
-              <label for="password">Password</label>
-              <input id="password" type="password" class="form__input">
-              <button class="button button--action">sign in</button>
-            </form></span>
-        </nav>
-      </div>
-    </header>
-    <section class="grid browse-wrap">
+      <input id="hamburger__checkbox" type="checkbox" class="switch">
+      <label for="hamburger__checkbox" class="nav--hamburger menu-label">menu<span href="#" class="hamburger"><span class="hamburger-icon"></span></span></label>
       <!--
       list used to accessibility, info is given to user about how many
       items are in lists if screenreaders are used
       -->
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Grana padana
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis explicabo temporibus est placeat repudiandae unde similique accusamus dolore soluta. Error corporis obcaecati sunt similique eveniet expedita deleniti cumque odio fugiat.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">italy</a><a href="#" class="card__meta--tag">matured</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Gorgonzola
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sed eveniet sint, libero quisquam temporibus, voluptatem sapiente debitis ut dolorum numquam blanditiis consectetur illum non nihil. Quod delectus ipsam molestias?
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">italy</a><a href="#" class="card__meta--tag">blue</a><a href="#" class="card__meta--tag">runny</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Brie
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero asperiores aut aperiam et sed id, culpa dolore ex labore similique nihil accusamus quo, nostrum, iusto. Nobis, suscipit! Libero, architecto, atque!
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">france</a><a href="#" class="card__meta--tag">runny</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Gammel Dansk
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis eum minima excepturi, asperiores dolores cumque repudiandae molestiae commodi est temporibus aliquid voluptate consequuntur pariatur magni quam quibusdam reprehenderit dolore.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">denmark</a><a href="#" class="card__meta--tag">medium</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Alpujarra
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ducimus eligendi enim repellendus eos a neque. Quis ab, non ad quod, aliquam eveniet! Eaque et dolores, sint iste ipsum velit.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">spain</a><a href="#" class="card__meta--tag">matured</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Roquefort
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsam nulla iste enim sint. Deserunt molestiae cupiditate, odit magni, aliquam voluptatibus a aut maiores molestias, excepturi ad maxime voluptates culpa?
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">france</a><a href="#" class="card__meta--tag">blue</a><a href="#" class="card__meta--tag">runny</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Camembert
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum id illum saepe neque rerum nemo, deserunt placeat labore facere minima repellendus. Soluta porro enim voluptas unde, cum dolor natus.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">france</a><a href="#" class="card__meta--tag">runny</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Gamle Ole
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam asperiores inventore facere, libero dolor dignissimos magni, minima officia animi, harum deserunt eius atque! Ratione fugiat harum, unde dolore, nostrum natus.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">denmark</a><a href="#" class="card__meta--tag">matured</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Pecorino Sardo
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam asperiores inventore facere, libero dolor dignissimos magni, minima officia animi, harum deserunt eius atque! Ratione fugiat harum, unde dolore, nostrum natus.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">italy</a><a href="#" class="card__meta--tag">matured</a>
-        </div>
-      </article>
-      <article class="card"><a href="#" class="card__action">
-          <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
-          </figure>
-          <h1 class="card__title">Pecorino Romano
-          </h1>
-          <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iure, debitis dolor quo nostrum unde tempora impedit? Blanditiis, ipsum a mollitia beatae, ratione debitis, architecto, iste quo libero reprehenderit veritatis.
-          </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
-        <div class="card__meta"><a href="#" class="card__meta--country">italy</a><a href="#" class="card__meta--tag">matured</a>
-        </div>
-      </article>
-    </section>
-    <section class="grid--row wrap grid--end grid__block social"><a href="#" class="grid__block link link--super-neutral">
-        <svg class="icon--medium icon--facebook">
-          <use xlink:href="#icon-facebook"></use>
-        </svg></a><a href="#" class="grid__block link link--super-neutral">
-        <svg class="icon--medium icon--twitter">
-          <use xlink:href="#icon-twitter"></use>
-        </svg></a><a href="#" class="grid__block link link--super-neutral">
-        <svg class="icon--medium icon--googleplus">
-          <use xlink:href="#icon-googleplus"></use>
-        </svg></a></section>
-    <section class="billboard billboard--default header--after priority--important">
-      <div class="grid wrap">
-        <h1 class="billboard__title">Cheese store</h1>
-        <p class="billboard__content">All these pictrues bellow would be pictures of cheese in a real world environment.</p>
-        <div class="metablock">
-          <svg class="icon--large">
-            <use xlink:href="#icon-paperplane"></use>
-          </svg>
-          <h2 class="metablock__title">Fast delivery</h2>
-          <p>With a blazing 5-7 day delievery time, we're so fast you won't believe it</p>
-        </div>
-        <div class="metablock">
-          <svg class="icon--large">
-            <use xlink:href="#icon-like"></use>
-          </svg>
-          <h2 class="metablock__title">The best cheeses</h2>
-          <p>We only sell select cheese with great culutural heritage. This way you know that all our cheese is the absolute best</p>
-        </div>
-        <div class="metablock">
-          <svg class="icon--large">
-            <use xlink:href="#icon-star"></use>
-          </svg>
-          <h2 class="metablock__title">Great gifts</h2>
-          <p>Give a good cheese to a friend or a smelly cheese to an enemy, it's all good</p>
-        </div>
-      </div>
-    </section>
-    <footer class="footer grid--center grid--center--v">
-      <div class="grid--row wrap">
-        <p>© Alexander D'Este 2015</p>
-      </div>
-    </footer>
+      <nav role="navigation" class="nav switch--toggle"><a href="#" class="nav__action">
+          <svg class="icon--logo">
+            <use xlink:href="#icon-logo"></use>
+          </svg></a>
+        <form action="#" class="nav__form">
+          <input name="search" placeholder="search" type="search" autofocus class="nav__input">
+        </form><a href="#" class="nav__action ficon ficon--list">browse</a><a href="#" class="nav__action ficon ficon--heart">pay</a><span class="nav__action nav__action--has-dropdown">
+          <input id="signin__checkbox" type="checkbox" class="switch">
+          <label for="signin__checkbox" class="nav__action nav__action--dropdown-action ficon ficon--user">sign in</label>
+          <form action="#" class="nav__dropdown">
+            <label for="username">Username</label>
+            <input id="username" type="text" class="form__input">
+            <label for="password">Password</label>
+            <input id="password" type="password" class="form__input">
+            <button class="form__cta">sign in</button>
+          </form></span>
+      </nav>
+    </header>
   </body>
 </html>
+<section class="grid browse-wrap">
+  <!--
+  list used to accessibility, info is given to user about how many
+  items are in lists if screenreaders are used
+  -->
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Grana padana
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis explicabo temporibus est placeat repudiandae unde similique accusamus dolore soluta. Error corporis obcaecati sunt similique eveniet expedita deleniti cumque odio fugiat.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>italy</a><a href="#" class="card__meta--tag">matured</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Gorgonzola
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sed eveniet sint, libero quisquam temporibus, voluptatem sapiente debitis ut dolorum numquam blanditiis consectetur illum non nihil. Quod delectus ipsam molestias?
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>italy</a><a href="#" class="card__meta--tag">blue</a><a href="#" class="card__meta--tag">runny</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Brie
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero asperiores aut aperiam et sed id, culpa dolore ex labore similique nihil accusamus quo, nostrum, iusto. Nobis, suscipit! Libero, architecto, atque!
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>france</a><a href="#" class="card__meta--tag">runny</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Gammel Dansk
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis eum minima excepturi, asperiores dolores cumque repudiandae molestiae commodi est temporibus aliquid voluptate consequuntur pariatur magni quam quibusdam reprehenderit dolore.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>denmark</a><a href="#" class="card__meta--tag">medium</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Alpujarra
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ducimus eligendi enim repellendus eos a neque. Quis ab, non ad quod, aliquam eveniet! Eaque et dolores, sint iste ipsum velit.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>spain</a><a href="#" class="card__meta--tag">matured</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Roquefort
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsam nulla iste enim sint. Deserunt molestiae cupiditate, odit magni, aliquam voluptatibus a aut maiores molestias, excepturi ad maxime voluptates culpa?
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>france</a><a href="#" class="card__meta--tag">blue</a><a href="#" class="card__meta--tag">runny</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Camembert
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum id illum saepe neque rerum nemo, deserunt placeat labore facere minima repellendus. Soluta porro enim voluptas unde, cum dolor natus.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>france</a><a href="#" class="card__meta--tag">runny</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Gamle Ole
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam asperiores inventore facere, libero dolor dignissimos magni, minima officia animi, harum deserunt eius atque! Ratione fugiat harum, unde dolore, nostrum natus.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>denmark</a><a href="#" class="card__meta--tag">matured</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Pecorino Sardo
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam asperiores inventore facere, libero dolor dignissimos magni, minima officia animi, harum deserunt eius atque! Ratione fugiat harum, unde dolore, nostrum natus.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>italy</a><a href="#" class="card__meta--tag">matured</a>
+    </div>
+  </article>
+  <article class="card"><a href="#" class="card__action">
+      <figure class="card__imgblock"><img alt="Pictrue of cheese" sizes="87wv, 600px" src="img/photo-1423766111988-c47a5ff6ed06.jpeg?food" srcset="img/photo-1423766111988-c47a5ff6ed06.jpeg?food 400w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 600w, img/photo-1423766111988-c47a5ff6ed06.jpeg?food 1200w" class="img">
+      </figure>
+      <h1 class="card__title">Pecorino Romano
+      </h1>
+      <p class="card__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iure, debitis dolor quo nostrum unde tempora impedit? Blanditiis, ipsum a mollitia beatae, ratione debitis, architecto, iste quo libero reprehenderit veritatis.
+      </p></a><a href="#" class="card__cta ficon ficon--shopping-cart">add to chart</a>
+    <div class="card__meta"><a href="#" class="card__meta--country">
+        <icon--small></icon--small>italy</a><a href="#" class="card__meta--tag">matured</a>
+    </div>
+  </article>
+</section>
+<section class="grid--row wrap grid--end grid__block social"><a href="#" class="grid__block link link--super-neutral">
+    <svg class="icon--medium icon--facebook">
+      <use xlink:href="#icon-facebook"></use>
+    </svg></a><a href="#" class="grid__block link link--super-neutral">
+    <svg class="icon--medium icon--twitter">
+      <use xlink:href="#icon-twitter"></use>
+    </svg></a><a href="#" class="grid__block link link--super-neutral">
+    <svg class="icon--medium icon--googleplus">
+      <use xlink:href="#icon-googleplus"></use>
+    </svg></a></section>
+<section class="billboard billboard--default header--after priority--important">
+  <div class="grid wrap">
+    <h1 class="billboard__title">Cheese store</h1>
+    <p class="billboard__content">All these pictrues bellow would be pictures of cheese in a real world environment.</p>
+    <div class="metablock">
+      <svg class="icon--large">
+        <use xlink:href="#icon-paperplane"></use>
+      </svg>
+      <h2 class="metablock__title">Fast delivery</h2>
+      <p>With a blazing 5-7 day delievery time, we're so fast you won't believe it</p>
+    </div>
+    <div class="metablock">
+      <svg class="icon--large">
+        <use xlink:href="#icon-like"></use>
+      </svg>
+      <h2 class="metablock__title">The best cheeses</h2>
+      <p>We only sell select cheese with great culutural heritage. This way you know that all our cheese is the absolute best</p>
+    </div>
+    <div class="metablock">
+      <svg class="icon--large">
+        <use xlink:href="#icon-star"></use>
+      </svg>
+      <h2 class="metablock__title">Great gifts</h2>
+      <p>Give a good cheese to a friend or a smelly cheese to an enemy, it's all good</p>
+    </div>
+  </div>
+</section>
+<footer class="footer grid--center grid--center--v">
+  <div class="grid--row wrap">
+    <p>© Alexander D'Este 2015</p>
+  </div>
+</footer>

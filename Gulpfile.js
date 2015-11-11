@@ -30,6 +30,10 @@ var gulp = require('gulp'),
   // SVG fixers
   svgstore = require('gulp-svgstore'),
   svgmin = require('gulp-svgmin'),
+  // Image optimization,
+  imagemin = require('gulp-imagemin'),
+  // Save as mozjepeg, for jpg files
+  imageminMozjpeg = require('imagemin-mozjpeg'),
   // Plumber, don't break my flow when I work
   plumber = require('gulp-plumber'),
   // Jade, HTML generator
@@ -38,6 +42,8 @@ var gulp = require('gulp'),
   data = require('gulp-data'),
   path = require('path'),
   fs = require('fs'),
+  // only get changes
+  changed = require('gulp-changed'),
   // merge-stream, output multilple tasks to multiple destinations
   merge = require('merge-stream');
 
@@ -68,6 +74,7 @@ gulp.task('styles:default', function() {
   return gulp.src('app/scss/style.scss')
     .pipe(sourcemaps.init())
     .pipe(plumber())
+    .pipe(changed('app/scss/', {extension: '.css'}))
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(sourcemaps.write())
@@ -96,6 +103,7 @@ gulp.task('styles:dist', function() {
 gulp.task('svg', function() {
   return gulp
     .src('app/svg/*.svg')
+    .pipe(imagemin({ multipass: true }))
     .pipe(rename({
       prefix: 'icon-'
     }))
@@ -106,13 +114,29 @@ gulp.task('svg', function() {
     .pipe(gulp.dest('app/img/'));
 });
 
+// Images
+gulp.task('images:pngs', function(tmp) {
+    gulp.src(['app/img/src/**/*.png'])
+      .pipe(plumber())
+      .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+      .pipe(gulp.dest('app/img'));
+});
+
+gulp.task('images:jpeg', function(tmp) {
+    gulp.src(['app/img/src/**/*.+(jpg|jpeg)'])
+      .pipe(plumber())
+      .pipe(imageminMozjpeg({quality: 80})())
+      .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+      .pipe(gulp.dest('app/img'));
+});
+
 // HTMLs
 gulp.task('template', function() {
   return gulp
-    .src('./app/jade/**/*.jade')
+    .src('./app/jade/*.jade')
     .pipe(plumber())
     .pipe(data(function(file) {
-      return JSON.parse(fs.readFileSync('./app/jade/' + path.basename(file.path) + '.json'));
+      return JSON.parse(fs.readFileSync('./app/jade/data.json'));
     }))
     .pipe(jade({pretty: true}))
     .pipe(gulp.dest('./app/'))

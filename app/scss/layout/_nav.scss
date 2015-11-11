@@ -1,24 +1,58 @@
 .nav {
   @extend %flex;
-  flex-flow: column wrap;
+  @extend %margin-top-off;
+  top: -10rem;
+  width: 30vw;
+  height: 0;
+  transition: all 400ms cubic-bezier(0, 1.3, 1, 1.2);
+  transform: translateZ(0);
+  opacity: 0;
+  flex-flow: column nowrap;
+}
 
+.switch:checked ~ .nav {
+  top: 0;
+  width: 30vw;
+  height: 100vh;
+  padding: ratio(1, rem);
+  opacity: 1;
+}
+
+.nav,
+.switch:checked ~ .nav {
   @include media('>=small') {
-    align-items: center;
-    justify-content: space-between;
+    top: 0;
+    display: flex;
+    width: 86vw;
+    height: inherit;
+    margin: 0;
+    padding: inherit;
+    transition: none;
+    opacity: 1;
     flex-flow: row wrap;
+    align-items: stretch;
   }
 }
 
-  // block--fullspan--large.grid--center--v
+.switch:not(:checked) ~ .nav {
+  margin: 0;
+}
+
+.nav--hamburger {
+  @extend %button;
+  position: fixed;
+  top: 1vh;
+  right: 7vw;
+  background: map-get($color-defs, header);
+}
+
 
 .nav__action,
 .nav__form {
   @extend %link--bright;
-  @extend %padding--common;
-  @extend %top-margin-off;
-  // display: inline-block;
 
   @include media('>=small') {
+    margin: 0;
     text-align: center;
   }
 }
@@ -27,15 +61,54 @@
   display: inline-block; // IE 10 doesn't recognize order, so we do this to avoid odd layouts there.
 
   @include media('>=small') {
+    display: flex;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav__action--has-dropdown {
+  @include media('>=small') {
+    flex-flow: column wrap;
     flex: 1;
   }
 }
 
+.nav__action--dropdown-action {
+  @include media('>=small') {
+    flex: 1;
+  }
+}
+
+.nav__dropdown {
+  @extend %flex;
+  display: none;
+  margin-top: ratio(1, rem);
+  flex-flow: column nowrap;
+
+  @include media('>=small') {
+    margin: 0;
+    padding: ratio(2, rem);
+  }
+}
+
+
+.switch:checked ~ .nav__dropdown {
+  display: flex;
+
+  @include media('>=small') {
+    position: absolute;
+    background: map-get($color-defs, header);
+  }
+}
 
 .nav__form {
   @extend %flex;
 
   @include media('>=small') {
+    margin: ratio(-4, rem) 0;
     order: 10;
     flex: ratio(2);
   }

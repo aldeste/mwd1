@@ -19,3 +19,8 @@
 .form__label {
   @extend %bold-font;
 }
+
+.form__cta {
+  @extend %button;
+  @extend %button--action;
+}
