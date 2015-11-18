@@ -39,11 +39,14 @@
 }
 
 .nav--hamburger {
-  @extend %button;
+  @extend %flex;
+  align-items: center;
   position: fixed;
-  top: 1vh;
-  right: 7vw;
+  height: 2rem;
+  padding: 0 1rem;
+  width: 100vw;
   background: map-get($color-defs, header);
+  backdrop-filter: blur(10px) saturate(150%);
 }
 
 
@@ -101,6 +104,7 @@
   @include media('>=small') {
     position: absolute;
     background: map-get($color-defs, header);
+    backdrop-filter: blur(10px) saturate(150%);
   }
 }
 

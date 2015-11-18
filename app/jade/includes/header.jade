@@ -65,7 +65,7 @@ html(lang='en')
       input#hamburger__checkbox.switch(type='checkbox')
       label.nav--hamburger.menu-label(for='hamburger__checkbox')
         | menu
-        span.hamburger(href='#')
+        span.hamburger
           span.hamburger-icon
       //
         list used to accessibility, info is given to user about how many
@@ -78,7 +78,7 @@ html(lang='en')
           input.nav__input(name='search', placeholder='search', type='search', autofocus)
         a.nav__action.ficon.ficon--list(href='#') browse
         a.nav__action.ficon.ficon--heart(href='#') pay
-        span.nav__action.nav__action--has-dropdown
+        div.nav__action.nav__action--has-dropdown
           input#signin__checkbox.switch(type='checkbox')
           label.nav__action.nav__action--dropdown-action.ficon.ficon--user(for='signin__checkbox')
             | sign in

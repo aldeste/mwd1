@@ -9,6 +9,8 @@
   left: 0;
   background: map-get($color-defs, header);
   flex: 0 10vw;
+  backdrop-filter: blur(10px) saturate(150%);
+
 
   @include media('>=small') {
     flex: 1 100vw;

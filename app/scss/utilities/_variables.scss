@@ -75,7 +75,7 @@ $color: (
 ) !default;
 
 $color-defs: (
-  header: rgba(darken(map-get($color,dark), 15%), .9),
+  header: rgba(map-get($color, dark), .9),
 ) !default;
 
 $container: (

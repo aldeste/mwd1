@@ -84,7 +84,7 @@
     </svg>
     <header class="header">
       <input id="hamburger__checkbox" type="checkbox" class="switch">
-      <label for="hamburger__checkbox" class="nav--hamburger menu-label">menu<span href="#" class="hamburger"><span class="hamburger-icon"></span></span></label>
+      <label for="hamburger__checkbox" class="nav--hamburger menu-label">menu<span class="hamburger"><span class="hamburger-icon"></span></span></label>
       <!--
       list used to accessibility, info is given to user about how many
       items are in lists if screenreaders are used
@@ -95,7 +95,8 @@
           </svg></a>
         <form action="#" class="nav__form">
           <input name="search" placeholder="search" type="search" autofocus class="nav__input">
-        </form><a href="#" class="nav__action ficon ficon--list">browse</a><a href="#" class="nav__action ficon ficon--heart">pay</a><span class="nav__action nav__action--has-dropdown">
+        </form><a href="#" class="nav__action ficon ficon--list">browse</a><a href="#" class="nav__action ficon ficon--heart">pay</a>
+        <div class="nav__action nav__action--has-dropdown">
           <input id="signin__checkbox" type="checkbox" class="switch">
           <label for="signin__checkbox" class="nav__action nav__action--dropdown-action ficon ficon--user">sign in</label>
           <form action="#" class="nav__dropdown">
@@ -104,7 +105,8 @@
             <label for="password">Password</label>
             <input id="password" type="password" class="form__input">
             <button class="form__cta">sign in</button>
-          </form></span>
+          </form>
+        </div>
       </nav>
     </header>
   </body>
